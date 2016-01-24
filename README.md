@@ -1,6 +1,9 @@
 # ASH Native script && jQuery Plugin
 Avoid Selectors Hell - is an extremely tiny tool to simplify work with columns in tables
 
+jQuery demo: http://tryshchenko.com/samples/ash/
+Native js demo: http://tryshchenko.com/samples/ash-native/ 
+
 
 ## How to use jQuery version
 You can use a pretty syntax for your operations:
