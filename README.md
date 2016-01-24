@@ -1,2 +1,2 @@
-# ash-jquery-plugin
+# ASH jQuery Plugin
 Avoid Selectors Hell - is extremely tiny jquery plugin to simplify work with columns in tables
