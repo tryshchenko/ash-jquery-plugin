@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ASH demo</title>
+	<script src="ash-native.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="row">
+		<div class="container">
+			<h1>ASH jQuery plugin example</h1>
+			<table class="table table-striped">
+				<thead>
+					<th>#</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Gender</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Issac</td>
+						<td>Newton</td>
+						<td>Male</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Nicolaus</td>
+						<td>Copernicus</td>
+						<td>Male</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Nikola</td>
+						<td>Tesla</td>
+						<td>Male</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Dennis</td>
+						<td>Ritchie</td>
+						<td>Male</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Johannes</td>
+						<td>Kepler</td>
+						<td>Male</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		<div class="container">
+			<button class="btn btn-primary" id="hideName">Hide name</button>
+			<button class="btn btn-primary" id="showName">Show name</button>
+			<button class="btn btn-success" id="toggleName">Toggle name</button>
+			<button class="btn btn-success" id="showAll">Show all</button>
+
+		</div>
+	</div>
+
+
+	<script>
+		window.onload = function() {
+			'use strict';
+
+			ash.get('.table').hideColumn(4);
+
+			var cells = ash.get('.table').getColumn(3);
+			
+			for (var i = 0; i < cells.length; i++) {
+				cells[i].style.color = 'green';
+			}
+
+			document.getElementById('hideName').addEventListener('click', function() {
+				ash.get('.table').hideColumn(2);
+			});
+
+			document.getElementById('showName').addEventListener('click', function() {
+				ash.get('.table').showColumn(2);
+			});
+
+			document.getElementById('toggleName').addEventListener('click', function() {
+				ash.get('.table').toggleColumn(2);
+			});
+			document.getElementById('showAll').addEventListener('click', function() {
+				ash.get('.table').showAllColumns();
+			});
+
+		}
+	</script>
+	
+</body>
+</html>
